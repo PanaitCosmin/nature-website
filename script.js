@@ -1,14 +1,19 @@
+// Navigation Elements
 const menuBtn = document.querySelector('#menu-btn');
 const navLinks = document.querySelector('.nav-links');
 const overlay = document.querySelector('#overlay');
 const mainContent = document.querySelector('#main-content');
 const navbar = document.querySelector('.navbar');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+// Sponsors Logos Elements
+const logosSlideCopy = document.querySelector('.logos-slide').cloneNode(true)
+const logosContainer = document.querySelector('.logos')
 
 let lastScrollY = window.scrollY;
 let scrollUpDistance = 0;
-const scrollUpThreshold = 30; // Optional: Set how much to scroll up before showing navbar
+const scrollUpThreshold = 30; // Set how much to scroll up before showing navbar
 
-// Function to toggle navbar (existing functionality)
 function toggleNavbar() {
 
     if (window.innerWidth < 768) {
@@ -24,17 +29,15 @@ function toggleNavbar() {
     } 
 }
 
-// Event Listener for Hamburger Menu
 menuBtn.addEventListener('click', toggleNavbar);
 
-// Event Listener for Overlay Click
 overlay.addEventListener('click', toggleNavbar);
 
 
 // Function to handle navbar visibility on scroll
 function handleNavbarVisibility() {
     const currentScrollY = window.scrollY;
-    const scrollThreshold = 20; // Decreased from 50 to 20
+    const scrollThreshold = 20; 
 
     if (currentScrollY < scrollThreshold) {
         // If near the top, show the navbar
@@ -68,17 +71,12 @@ function throttle(fn, wait) {
 }
 
 // Add scroll event listener with throttling
-window.addEventListener('scroll', throttle(handleNavbarVisibility, 100)); // Reduced wait time to 100ms
+window.addEventListener('scroll', throttle(handleNavbarVisibility, 100)); 
 
 // Close navbar when a link is clicked (Mobile)
-const navLinksItems = document.querySelectorAll('.nav-links a');
-
 navLinksItems.forEach(link => {
         link.addEventListener('click', toggleNavbar);
 });
 
-
 // Clone logos
-const logosSlideCopy = document.querySelector('.logos-slide').cloneNode(true)
-const logosContainer = document.querySelector('.logos')
 logosContainer.appendChild(logosSlideCopy)
