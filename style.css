@@ -78,6 +78,67 @@ section p {
     font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
 }
 
+
+/* Card */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    width: 300px; 
+    height: 300px;
+
+    background-color: var(--clr-light-gray);
+}
+
+.card-img {
+    position: absolute;
+    top: -50px;
+    width: 100px; 
+    height: 100px; 
+    margin: 0 auto 15px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 10px solid var(--clr-white);
+}
+
+.card-img img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.card-message {
+    line-height: 1.4;
+}
+
+.card-person {
+    margin-top: 20px;
+}
+
+.card-person {
+    font-size: .75em;
+    letter-spacing: .1em;
+}
+
+.card-person .card-firstname {
+    color: var(--clr-green);
+    font-size: 1.3em;
+}
+
 .btn {
     width: 15ch;
     margin-inline: auto;
@@ -240,13 +301,6 @@ body.no-scroll {
     gap: 16px;
 }
 
-.about .team {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
 
 .about-message {
     max-width: 60ch;
@@ -436,55 +490,7 @@ body.no-scroll {
     flex-wrap: wrap;
 }
 
-.testi-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
-    width: 300px; /* Limit the width of the card */
-    height: 300px;
 
-    background-color: var(--clr-light-gray);
-}
-
-.testi-img {
-    position: absolute;
-    top: -50px;
-    width: 100px; /* Width of the image container */
-    height: 100px; /* Height of the image container */
-    margin: 0 auto 15px; /* Center the image container and add margin */
-    border-radius: 50%; /* Make the image container circular */
-    overflow: hidden; /* Ensure the image fits within the circle */
-    border: 10px solid var(--clr-white); /* Add a border around the circle */
-}
-
-.testi-img img {
-    width: 100%; /* Ensure the image covers the container */
-    height: 100%; /* Ensure the image covers the container */
-    object-fit: cover; /* Make sure the image scales properly */
-}
-
-.testi-message {
-    line-height: 1.4;
-}
-
-.testi-person {
-    margin-top: 20px;
-}
-
-.testi-person {
-    font-size: .75em;
-    letter-spacing: .1em;
-}
-
-.testi-person .testi-firstname {
-    color: var(--clr-green);
-    font-size: 1.3em;
-}
 
 textarea {
     resize: none;
