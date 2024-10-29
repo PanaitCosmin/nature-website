@@ -435,12 +435,12 @@ body.no-scroll {
 
 .logos:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    background: linear-gradient(to left, rgba(248, 249, 250, 0), rgb(248, 249, 250));
 }
 
 .logos:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    background: linear-gradient(to right, rgba(248, 249, 250, 0), rgb(248, 249, 250));
 
 }
 
