@@ -14,22 +14,11 @@
     box-sizing: border-box;
 }
 
-/* 
-background: -webkit-linear-gradient(#1afd53, #6ee00a);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
 body {
     font-family: 'Courier New', Courier, monospace;
     transition: filter 0.3s ease;
     background-color: var(--clr-white);
 }
-
-/* section,
-footer {
-    background-color: #F8F9FA;
-} */
 
 ul {
     list-style: none;
@@ -76,6 +65,15 @@ section h2 {
 
 section p {
     font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+}
+
+textarea {
+    resize: none;
+}
+
+path,
+circle {
+    fill: var(--clr-green);
 }
 
 
@@ -314,28 +312,28 @@ body.no-scroll {
     align-items: center;
     text-align: center;
     gap: 10px;
-    background-color: var(--clr-light-gray); /* Light background for the card */
-    padding: 20px; /* Padding inside the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
-    margin: 20px; /* Space around the card */
-    width: 300px; /* Limit the width of the card */
+    background-color: var(--clr-light-gray); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    margin: 20px; 
+    width: 300px; 
     height: 400px;
 }
 
 .member-img {
-    width: 150px; /* Width of the image container */
-    height: 150px; /* Height of the image container */
-    margin: 0 auto 15px; /* Center the image container and add margin */
-    border-radius: 50%; /* Make the image container circular */
-    overflow: hidden; /* Ensure the image fits within the circle */
-    border: 2px solid var(--clr-green); /* Add a border around the circle */
+    width: 150px; 
+    height: 150px; 
+    margin: 0 auto 15px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 2px solid var(--clr-green); 
 }
 
 .member-img img {
-    width: 100%; /* Ensure the image covers the container */
-    height: 100%; /* Ensure the image covers the container */
-    object-fit:cover; /* Make sure the image scales properly */
+    width: 100%; 
+    height: 100%; 
+    object-fit:cover; 
 }
 
 .member-name {
@@ -346,7 +344,7 @@ body.no-scroll {
 
 .member-title {
     font-size: 1em;
-    color: var(--clr-green); /* Slightly lighter color for the title */
+    color: var(--clr-green); 
 }
 
 
@@ -406,7 +404,7 @@ body.no-scroll {
 .program-container .program-img {
     width: 100%;
     height: 100%;
-    border: 2px solid var(--clr-green); /* Add a border around the circle */
+    border: 2px solid var(--clr-green); 
     padding: 3px;
 }
 
@@ -462,7 +460,7 @@ body.no-scroll {
     margin-inline: 40px;
 }
 
-/* @keyframes slide {
+@keyframes slide {
     from {
         transform: translateX(0);
     }
@@ -470,7 +468,7 @@ body.no-scroll {
         transform: translateX(-100%);
 
     }
-} */
+}
 
 
 /* Testimonial Section */
@@ -483,20 +481,9 @@ body.no-scroll {
     gap: 50px;
 }
 
-.testi-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
-
-textarea {
-    resize: none;
-}
 
 /* Contact Section */
+
 .contact {
     display: flex;
     justify-content: space-around;
@@ -574,6 +561,7 @@ select {
 
 
 /* Footer Section */
+
 .footer { 
     display: flex;
     flex-direction: column;
@@ -598,7 +586,6 @@ select {
 .footer .contact-item a {
     margin-inline: 16px;
 }
-
 
 .footer .copyright {
     margin-top: 16px;
@@ -682,9 +669,6 @@ select {
     }
 
 
-    /* About Us Section */
-
-
     /* Program Section */
 
     .programs .program-container {
@@ -709,6 +693,7 @@ select {
 
 
     /* Contact Section */
+
     .contact {
         flex-direction: column;
         justify-content: center;
@@ -724,10 +709,4 @@ select {
         width: 40ch;
     }
     
-    
-}
-
-path,
-circle {
-    fill: var(--clr-green);
 }
